@@ -12,6 +12,12 @@
 
 #include "fdf.h"
 
+int		clos_e(void *param)
+{
+	(void)param;
+	exit(0);
+}
+
 int			key_control(int key, void *p)
 {
 	t_fdf	*data;
@@ -41,4 +47,5 @@ void		control(t_fdf *data)
 	mlx_hook(data->win, 4, 0, mouse_press, data);
 	mlx_hook(data->win, 5, 0, mouse_release, data);
 	mlx_hook(data->win, 6, 0, mouse_move, data);
+	mlx_hook(data->win, 17, 0, clos_e, data);
 }

@@ -112,5 +112,6 @@ float					min_v(float a, float b);
 void					error_proc(char *str);
 int						isnbr(char *str);
 int						check_file(char *file);
+int						clos_e(void *param);
 
 #endif
